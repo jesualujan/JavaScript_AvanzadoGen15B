@@ -1,0 +1,19 @@
+{
+  "name": "01.introanode",
+  "version": "1.0.0",
+  "description": "aprendiendo a usar nodejs y npm",
+  "main": "index.js",
+  "scripts": {
+     "start": "node index.js"
+  },
+  "keywords": [
+    "npm",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "grupo B",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
