@@ -96,23 +96,35 @@ const marte =async(rover,camara,dsv)=>{
 	while (divmarte.firstChild){
 		divmarte.removeChild(divmarte.firstChild)
 	}
-	fotosMarte.forEach((foto)=>{
-		let iddiv = "hijo"+String(foto.id)
-		document.getElementById("tarjeta").innerHTML += `
-		<div class="relative border rounded shadow" id=${iddiv}>
-			<img src=${foto.img_src} alt=${foto.id} class="rounded" />
-			<div class="bg-white opacity-70 p-5 absolute bottom-0 text-black font-bold flex flex-col">
-				<span>${foto.earth_date}</span>
-				<span>${foto.camera.name}</span>
-			</div>
-		</div>
-		
-		
-		
+	if (fotosMarte.length == 0){
+		document.getElementById("tarjeta").innerHTML=`
+		 <h2 class ="m-5 text-white text-3xl font-bold my-5"> Selecciona otro dia, no hay fotos en tu seleccion </h2>
 		`
 
+	}
+	else{
+		fotosMarte.forEach((foto)=>{
+			let iddiv = "hijo"+String(foto.id)
+			document.getElementById("tarjeta").innerHTML += `
+			<div class="relative border rounded shadow" id=${iddiv}>
+				<img src=${foto.img_src} alt=${foto.id} class="rounded" />
+				<div class="bg-white opacity-70 p-5 absolute bottom-0 text-black font-bold flex flex-col">
+					<span>${foto.earth_date}</span>
+					<span>${foto.camera.name}</span>
+				</div>
+			</div>
+			
+			
+			
+			`
+	
+	
+		})
 
-	})
+
+
+	}
+	
 
 }
 

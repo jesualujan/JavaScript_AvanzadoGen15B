@@ -5,33 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .espaciado {margin-bottom: 15px;}
+    </style>
     <title>NASA API</title>
 </head>
-<body>
-    <select name="opcionesRover" id="opcionesSeleccion" onchange="seleccion()">
-        <option value="Curiosity">Curiosity</option>
-        <option value="Opportunity">Opportunity</option>
-        <option value="Spirit">Spirit</option>
-
-    </select>
-    <select name="opcionesCamara" id="opcionesSeleccion2" onchange="seleccion2()">
-        <option value="FHAZ">Front Hazard Avoidance Camera</option>
-        <option value="RHAZ">Rear Hazard Avoidance Camera</option>
-        <option value="MAST">Mast Camera</option>
-        <option value="CHEMCAM">Chemistry and Camera Complex</option>
-        <option value="MAHLI">	Mars Hand Lens Imager</option>
-        <option value="MARDI">	Mars Descent Imager</option>
-        <option value="NAVCAM">Navigation Camera</option>
-        <option value="PANCAM">Panoramic Camera</option>
-        <option value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
-
-    </select>
-    <input type="number" value=10 id="diasolar">
-    <button onclick="ejecutar()">Hacer query</button>
-    <div class="mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tarjeta">
+<body class="bg-slate-900">
+    
 
 
+    
+    <div class="bg-slate-900 w-full min-h-screen p-5 lg:container lg:m-auto">
+        <div class="flex justify-evenly items-center">
+            <h1 class="m-5 text-white text-3xl font-bold my-5 ">Aplicacion que consume la API de la NASA</h1>
 
+        </div>
+
+        <div class="flex justify-evenly items-center espaciado">
+            <div class="inline-block relative w-64">
+                <label class="text-white text-2xl font-bold my-5" for="opcionesSeleccion">Selecciona tu rover</label>
+                <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-5000 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" name="opcionesRover" id="opcionesSeleccion" onchange="seleccion()">
+                    <option value="Curiosity">Curiosity</option>
+                    <option value="Opportunity">Opportunity</option>
+                    <option value="Spirit">Spirit</option>
+        
+                </select>
+                
+            </div>
+            <div class="inline-block relative w-64">
+                <label class="text-white text-2xl font-bold my-5" for="opcionesSeleccion2">Selecciona la camara</label>
+                <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-5000 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" name="opcionesCamara" id="opcionesSeleccion2" onchange="seleccion2()">
+                    <option value="FHAZ">Front Hazard Avoidance Camera</option>
+                    <option value="RHAZ">Rear Hazard Avoidance Camera</option>
+                    <option value="MAST">Mast Camera</option>
+                    <option value="CHEMCAM">Chemistry and Camera Complex</option>
+                    <option value="MAHLI">	Mars Hand Lens Imager</option>
+                    <option value="MARDI">	Mars Descent Imager</option>
+                    <option value="NAVCAM">Navigation Camera</option>
+                    <option value="PANCAM">Panoramic Camera</option>
+                    <option value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
+        
+                </select>
+
+
+
+            </div>
+            <div class="inline-block relative w-64">
+                <label class="text-white text-2xl font-bold my-5" for="diasolar">Escribe el dia solar</label>
+                <input class="px-4 py-2  block appearance-none w-full bg-white border border-gray-400 rounded shadow" type="number" value=100 id="diasolar">
+            </div>
+            <div class="inline-block relative w-64">
+                <button class="h-10 px-6 text-2xl font-bold rounded-md  text-white" onclick="ejecutar()">Hacer query</button>
+
+            </div>
+
+        </div>
+
+
+        
+
+
+        
+        
+        
+        
+        <div class="mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tarjeta">
+
+
+
+
+        </div>
 
     </div>
     <script src="index.js"></script>
