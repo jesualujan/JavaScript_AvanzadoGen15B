@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>NASA API</title>
 </head>
 <body>
-    <div id="fotodiv">
-        
+    <select name="opcionesRover" id="opcionesSeleccion" onchange="seleccion()">
+        <option value="Curiosity">Curiosity</option>
+        <option value="Opportunity">Opportunity</option>
+        <option value="Spirit">Spirit</option>
+
+    </select>
+    <select name="opcionesCamara" id="opcionesSeleccion2" onchange="seleccion2()">
+        <option value="FHAZ">Front Hazard Avoidance Camera</option>
+        <option value="RHAZ">Rear Hazard Avoidance Camera</option>
+        <option value="MAST">Mast Camera</option>
+        <option value="CHEMCAM">Chemistry and Camera Complex</option>
+        <option value="MAHLI">	Mars Hand Lens Imager</option>
+        <option value="MARDI">	Mars Descent Imager</option>
+        <option value="NAVCAM">Navigation Camera</option>
+        <option value="PANCAM">Panoramic Camera</option>
+        <option value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
+
+    </select>
+    <input type="number" value=10 id="diasolar">
+    <button onclick="ejecutar()">Hacer query</button>
+    <div class="mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tarjeta">
+
+
+
+
     </div>
     <script src="index.js"></script>
+
 </body>
 </html>
