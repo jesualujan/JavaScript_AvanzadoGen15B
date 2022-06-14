@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .espaciado {margin-bottom: 15px;}
+    </style>
+    <title>Spotify API</title>
+</head>
+<body class="bg-slate-900">
+    
+
+
+    
+    <div class="bg-slate-900 w-full min-h-screen p-5 lg:container lg:m-auto">
+        <div class="flex justify-evenly items-center">
+            <h1 class="m-5 text-white text-3xl font-bold my-5 ">Aplicacion que consume la API de Spotify</h1>
+
+        </div>
+
+        <div class="flex justify-evenly items-center espaciado">
+            
+            <div class="inline-block relative w-64">
+                <label class="text-white text-2xl font-bold my-5" for="diasolar">Escribe tu artista favorito</label>
+                <input class="px-4 py-2  block appearance-none w-full bg-white border border-gray-400 rounded shadow" type="text"  id="artista">
+            </div>
+            <div class="inline-block relative w-64">
+                <button class="h-10 px-6 text-2xl font-bold rounded-md  text-white" onclick="ejecutar()">Hacer query</button>
+
+            </div>
+
+        </div>
+
+
+        
+
+
+        
+        
+        
+        
+        <div class="mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tarjeta">
+
+
+
+
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+
+</body>
+</html>
