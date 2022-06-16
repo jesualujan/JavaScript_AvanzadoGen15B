@@ -68,19 +68,24 @@ const URI = 'https://goodreads-devf-aaron.herokuapp.com/api/v1/authors/'
                              //  404            ,      NOT FOUND
             }
         })
-
     }
 
-
-
-
-
-
-
+    //? ELIMINAR UN AUTOR
+    const deleteAuthor = (id) => {
+        request.delete (URI+id+'/' , (error, response, body) => {
+            if(response.statusCode === 204){
+                console.log("EL AUTOR HA SIDO ELIMINADO EXITOSAMENTE")
+            }else {
+                console.log(response.statusCode, response.statusMessage)
+                             //  404            ,      NOT FOUND
+            }
+        })
+    }
 
 module.exports = {
     listAuthors,
     getAuthor,
     createAuthor,
-    patchAuthor
+    patchAuthor,
+    deleteAuthor
     }
