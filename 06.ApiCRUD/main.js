@@ -5,7 +5,7 @@ const goodReadsCrud = require ('./Authors.js')
 // goodReadsCrud.listAuthors()
 
 //* LISTA DE UN AUTOR POR SU ID 
-goodReadsCrud.getAuthor(14737)
+// goodReadsCrud.getAuthor(14737)
 
 //* CREAMOS UN AUTOR
 // const jsonSend = {
@@ -18,3 +18,11 @@ goodReadsCrud.getAuthor(14737)
 // 	is_alive: true
 // }
 // goodReadsCrud.createAuthor(jsonSend)
+
+//* PATCH A UN AUTOR
+const updateData = {
+    name: "Maria",
+	last_name: "Fernanda",
+	biography: "Writter"
+}
+goodReadsCrud.patchAuthor(14737,updateData)
