@@ -20,9 +20,12 @@ const goodReadsCrud = require ('./Authors.js')
 // goodReadsCrud.createAuthor(jsonSend)
 
 //* PATCH A UN AUTOR
-const updateData = {
-    name: "Maria",
-	last_name: "Fernanda",
-	biography: "Writter"
-}
-goodReadsCrud.patchAuthor(14737,updateData)
+// const updateData = {
+//     name: "Maria",
+// 	last_name: "Fernanda",
+// 	biography: "Writter"
+// }
+// goodReadsCrud.patchAuthor(14737,updateData)
+
+//*ELIMINAR UN AUTOR
+goodReadsCrud.deleteAuthor(14568) 
