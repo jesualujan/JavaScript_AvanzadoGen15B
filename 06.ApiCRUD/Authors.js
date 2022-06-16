@@ -21,6 +21,22 @@ const URI = 'https://goodreads-devf-aaron.herokuapp.com/api/v1/authors/'
         })
     }
 
+//? LISTAR UN AUTOR POR SU ID 
+    const getAuthor = (id) => {
+        request.get(URI+id+'/', (error, response, body) => {
+            if(response.statusCode === 200){
+                const author = JSON.parse(body)
+                console.log(author)
+            }else{
+                console.log("ID NO VALIDO: ", response.statusCode , response.statusMessage)
+            }                                   //  404           ,      NOT FOUND
+        })
+    }
+
+
+
+
 module.exports = {
-    listAuthors
+    listAuthors,
+    getAuthor
     }
